@@ -1,0 +1,15 @@
+/* .letter-style-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+.letter-style {
+  width: 9%;
+  margin: 0.5%;
+  box-sizing: border-box;
+}
+
+.letter-style:nth-child(21) ~ .letter-style {
+  width: 14.5%;
+}
