@@ -12,12 +12,12 @@ function Main() {
   
 
   useEffect(() => {
-    fetch("http://localhost:8000/items", {
+    fetch("http://localhost:8080/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: item }),
+      body: JSON.stringify({ name: item[item.length-1] }),
     }).then((response) => {
       if (response.ok) {
         console.log("items added");
