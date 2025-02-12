@@ -31,7 +31,7 @@ db_dependency = Annotated[Session, Depends(get_db)]
 
 
 @app.post("/items/",status_code=status.HTTP_200_OK)
-async def create_item(item: Items, db:db_dependency):
+async def create_item(item: Items,db: db_dependency):
     # return item
     db_item = models.Item(**item.dict())
     db.add(db_item)
